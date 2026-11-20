@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"dotfiles/base/cmd/dotfiles/internal/dotfiles"
+	"github.com/some-programs/dotfiles/internal/dotfiles"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module dotfiles/base/cmd/dotfiles
+module github.com/some-programs/dotfiles
 
 go 1.26.0
 
