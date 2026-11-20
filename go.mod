@@ -9,8 +9,8 @@ require (
 	github.com/pelletier/go-toml/v2 v2.4.3
 	github.com/peterbourgon/ff/v3 v3.4.0
 	go.starlark.net v0.0.0-20261021141710-4f4267fb140d
-	golang.org/x/term v0.47.0
+	golang.org/x/term v0.48.0
 	mvdan.cc/sh/v3 v3.14.1
 )
 
-require golang.org/x/sys v0.49.0 // indirect
+require golang.org/x/sys v0.50.0 // indirect
