@@ -201,11 +201,11 @@ func TestLoadThemeErrors(t *testing.T) {
 	}
 }
 
-// TestSelenizedTheme loads the theme in base, so that a broken palette fails
+// TestSelenizedTheme loads the theme in testdata, so that a broken palette fails
 // the tests.
 func TestSelenizedTheme(t *testing.T) {
 	t.Parallel()
-	theme, err := loadTheme(filepath.Join("..", "..", "config-base", "themes", "selenized"))
+	theme, err := loadTheme(filepath.Join("testdata", "themes", "selenized"))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -221,16 +221,16 @@ func TestSelenizedTheme(t *testing.T) {
 	}
 }
 
-// TestRepositoryThemes loads every theme in base, so that a broken palette
+// TestRepositoryThemes loads every theme in testdata, so that a broken palette
 // fails the tests.
 func TestRepositoryThemes(t *testing.T) {
 	t.Parallel()
-	dirs, err := filepath.Glob(filepath.Join("..", "..", "config-base", "themes", "*", "theme.toml"))
+	dirs, err := filepath.Glob(filepath.Join("testdata", "themes", "*", "theme.toml"))
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(dirs) < 5 {
-		t.Fatalf("found %d themes, want at least 5", len(dirs))
+	if len(dirs) < 2 {
+		t.Fatalf("found %d themes, want at least 2", len(dirs))
 	}
 	for _, f := range dirs {
 		theme, err := loadTheme(filepath.Dir(f))

@@ -1,0 +1,41 @@
+mode = "light"
+
+# Selenized white (jan-warchol/selenized, the-values.md). Changes:
+#   - dim_1: dim_0 and fg_0 mixed 50/50 in OKLab; upstream has none.
+[colors]
+bg_0  = "#ffffff"
+bg_1  = "#ebebeb"
+bg_2  = "#cdcdcd"
+dim_0 = "#878787"
+dim_1 = "#666666" # derived
+fg_0  = "#474747"
+fg_1  = "#282828"
+
+yellow  = "#c49700"
+orange  = "#d04a00"
+red     = "#d6000c"
+magenta = "#dd0f9d"
+violet  = "#7f51d6"
+blue    = "#0064e4"
+cyan    = "#00ad9c"
+green   = "#1d9700"
+
+br_red     = "#bf0000"
+br_green   = "#008400"
+br_yellow  = "#af8500"
+br_blue    = "#0054cf"
+br_magenta = "#c7008b"
+br_cyan    = "#009a8a"
+br_orange  = "#ba3700"
+br_violet  = "#6b40c3"
+
+[apps]
+emacs        = "my-solarized-selenized-white"
+color_scheme = "prefer-light"
+
+# The root window background: soft diagonal stripes from bg_0 to bg_1, drawn
+# at the DPI of the host, in a direction and width that change on every theme
+# switch. background_mode is how hsetroot draws it: tile, center, full, fill,
+# cover or extend.
+background      = ":random()"
+background_mode = "tile"
