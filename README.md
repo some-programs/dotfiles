@@ -16,6 +16,14 @@ B, every key of `dotfiles.toml`; C, the options with their environment
 variables; and D, every variable and function of expressions, templates and
 Starlark scripts. `dotfiles doc appendix b` prints only appendix B.
 
+## Examples
+
+Three public repositories on Github:
+
+- [github.com/thomasf/dotfiles-thomasf-base](https://github.com/thomasf/dotfiles-thomasf-base), and its [dotfiles.toml](https://github.com/thomasf/dotfiles-thomasf-base/blob/master/dotfiles.toml), also contains a set of [themes for dotfiles](https://github.com/thomasf/dotfiles-thomasf-base/tree/master/config-base/themes)
+- [github.com/thomasf/dotfiles-thomasf-xmonad](https://github.com/thomasf/dotfiles-thomasf-xmonad), and its [dotfiles.toml](https://github.com/thomasf/dotfiles-thomasf-xmonad/blob/master/dotfiles.toml), including templates that uses themes
+- [github.com/thomasf/dotfiles-thomasf-emacs](https://github.com/thomasf/dotfiles-thomasf-emacs), and its [dotfiles.toml](https://github.com/thomasf/dotfiles-thomasf-emacs/blob/master/dotfiles.toml)
+
 ## Dotfiles Repositories
 
 `dotfiles` works on a set of dotfiles repositories: it finds them on disk
