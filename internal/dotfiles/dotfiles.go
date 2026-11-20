@@ -86,6 +86,7 @@ func (d *Dotfiles) Run(stdout, stderr io.Writer, args []string) error {
 		fmt.Fprintf(stderr, "  pathenv [reload|exec|status|edit]  Print the shell code of the environment for the directory, or run a command in it (see pathenv -h)\n")
 		fmt.Fprintf(stderr, "  lint [repo...]  Validate configurations, templates, and referenced files\n")
 		fmt.Fprintf(stderr, "  doc [topic]     Print the manual, or only the sections whose heading or number matches topic; doc toc lists them\n")
+		fmt.Fprintf(stderr, "  self-update     Update dotfiles by running go install github.com/some-programs/dotfiles@latest\n")
 		fmt.Fprintf(stderr, "\nOptions:\n")
 		fs.PrintDefaults()
 	}
@@ -103,6 +104,9 @@ func (d *Dotfiles) Run(stdout, stderr io.Writer, args []string) error {
 	command := remainingArgs[0]
 	if command == "doc" {
 		return d.DocCommand(remainingArgs[1:])
+	}
+	if command == "self-update" {
+		return d.SelfUpdateCommand(remainingArgs[1:])
 	}
 
 	if err := d.discoverRepos(); err != nil {
