@@ -1,4 +1,4 @@
-# dotfiles-go
+# dotfiles
 
 A tool to manage and synchronize dotfiles from multiple repositories. It
 automates the process of creating symlinks, configuring git, and running setup
