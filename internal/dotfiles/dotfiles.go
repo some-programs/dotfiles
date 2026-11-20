@@ -87,6 +87,7 @@ func (d *Dotfiles) Run(stdout, stderr io.Writer, args []string) error {
 		fmt.Fprintf(stderr, "  lint [repo...]  Validate configurations, templates, and referenced files\n")
 		fmt.Fprintf(stderr, "  doc [topic]     Print the manual, or only the sections whose heading or number matches topic; doc toc lists them\n")
 		fmt.Fprintf(stderr, "  self-update     Update dotfiles by running go install github.com/some-programs/dotfiles@latest\n")
+		fmt.Fprintf(stderr, "  completion [shell]  Export shell completion code for dotfiles (default: bash)\n")
 		fmt.Fprintf(stderr, "\nOptions:\n")
 		fs.PrintDefaults()
 	}
@@ -107,6 +108,9 @@ func (d *Dotfiles) Run(stdout, stderr io.Writer, args []string) error {
 	}
 	if command == "self-update" {
 		return d.SelfUpdateCommand(remainingArgs[1:])
+	}
+	if command == "completion" {
+		return d.CompletionCommand(remainingArgs[1:])
 	}
 
 	if err := d.discoverRepos(); err != nil {
