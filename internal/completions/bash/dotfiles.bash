@@ -268,7 +268,7 @@ _dotfiles()
             local global_opts="-copy --copy -dry-run --dry-run -dst --dst -f -overwrite-skipped --overwrite-skipped -repos --repos -repository --repository -theme --theme -v -h --help"
             COMPREPLY=( $(compgen -W "${global_opts}" -- "${cur}") )
         else
-            local commands="install i plan which push publish pull status s diff d magit log repos theme pathenv lint doc self-update completion"
+            local commands="install i plan which push publish pull status s diff d magit log repos theme pathenv lint doc self-update version completion"
             COMPREPLY=( $(compgen -W "${commands}" -- "${cur}") )
         fi
         return 0
@@ -426,6 +426,10 @@ _dotfiles()
             ;;
         self-update)
             COMPREPLY=( $(compgen -W "-h --help" -- "${cur}") )
+            return 0
+            ;;
+        version)
+            COMPREPLY=( $(compgen -W "-all --all -h --help" -- "${cur}") )
             return 0
             ;;
         push|publish|status|s|diff|d|magit)
